@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
           height="1"
           width="1"
           style={{ display: "none" }}
-          src={`https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1`}
+          src={`https://www.facebook.com/tr?id=1077284977166574&ev=PageView&noscript=1`}
         />
       </noscript>
       
