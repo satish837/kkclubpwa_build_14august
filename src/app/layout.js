@@ -4,7 +4,7 @@
 import localFont from 'next/font/local';
 const lneue = localFont({ weight: 'normal', variable: '--font-lneue', src: '../../public/assets/fonts/LarishNeueSemiboldRegular.woff2' });
 const arialmt = localFont({ weight: 'normal', variable: '--font-arialmt', src: '../../public/assets/fonts/arialmt.woff2' });
- 
+import Script from "next/script";
 import "./globals.css";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -60,8 +60,32 @@ export default function RootLayout({ children }) {
       <meta name="theme-color" content="#000000"/>
       <GoogleAnalytics gaId="G-LZYCLF5X2M" />
        {/* Facebook Pixel Code */}
-      <script> !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1077284977166574'); fbq('track', 'PageView'); </script> <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1077284977166574&ev=PageView&noscript=1" /></noscript> 
-       {/* Facebook Pixel Code */}
+       <Script
+        id="facebook-pixel"
+        strategy="afterInteractive"
+      >
+        {`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1077284977166574');
+          fbq('track', 'PageView');
+        `}
+      </Script>
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: "none" }}
+          src={`https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1`}
+        />
+      </noscript>
+      
       <meta name="google-site-verification" content="r6ZkF2xnlsOl1kVXDNkgMST9upMHFeLAz1Y0WQQDVHk" />
 
       <body className={`${lneue.variable} ${arialmt.variable}`}>
