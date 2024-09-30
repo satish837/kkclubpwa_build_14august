@@ -77,14 +77,7 @@ export default function RootLayout({ children }) {
           fbq('track', 'PageView');
         `}
       </Script>
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: "none" }}
-          src={`https://www.facebook.com/tr?id=1077284977166574&ev=PageView&noscript=1`}
-        />
-      </noscript>
+      
       
       <meta name="google-site-verification" content="r6ZkF2xnlsOl1kVXDNkgMST9upMHFeLAz1Y0WQQDVHk" />
 
