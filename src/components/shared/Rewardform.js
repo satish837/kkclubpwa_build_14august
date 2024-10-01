@@ -133,16 +133,9 @@ export default function Rewardform() {
         if(!isEligible || parseInt(redeempoint) > parseInt(pointsEligible))
         {
             // setErrorMsg(`You are eligible to redeem up to ${pointsEligible} reward points.`); 
-            setErrorMsg(`You have exceeded redemption limit of ${redeemmaximumpoint} points in a day. Please come back tomorrow.`); 
+            setErrorMsg(`You have exceeded redemption limit of 10000 points in a day. Please come back tomorrow.`); 
             return;
         }
-            if (!isEligible || parseInt(redeempoint) <= 0 || parseInt(redeempoint) > 2000) 
-            {
-                // setErrorMsg(`You are eligible to redeem up to ${pointsEligible} reward points.`); 
-                setErrorMsg(`You have exceeded redemption limit of 2000 points in a transections. Please enter amount less than 2000`); 
-                return;
-            }
-    
         
         setLoading(true);
         setPagemsg('Payment Initiation');
@@ -182,7 +175,7 @@ export default function Rewardform() {
                 setPagemsg('Payment Initiating');
                 _get(`/Payment/UserPayoutStatus?userID=${userID}&orderID=${val}`)
                 .then((res) => {   
-                  //  console.log("Payout Status - ", res); 
+                    //console.log("Payout Status - ", res); 
                    setTimeout(() => {
                        setLoading(false);
                        toast.success("Payment Initiated"); 
