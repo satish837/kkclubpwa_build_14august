@@ -94,10 +94,6 @@ export default function RootLayout({ children }) {
               <Starfield starCount={1000} starColor={[255, 255, 255]} speedFactor={0.05} />
             </AuthProvider>
         </main>
-        <Script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/fscreen%401.0.1.js'></Script>
-<Script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/Stage%400.1.4.js'></Script>
-<Script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/MyMath.js'></Script>
-<Script src='https://fireworks-kk.netlify.app/script.js'></Script>
 
       </body>
     </html>
