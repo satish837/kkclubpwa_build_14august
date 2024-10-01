@@ -136,6 +136,12 @@ export default function Rewardform() {
             setErrorMsg(`You have exceeded redemption limit of ${redeemmaximumpoint} points in a day. Please come back tomorrow.`); 
             return;
         }
+        if(!isEligible || parseInt(redeempoint) > parseInt(2000))
+            {
+                // setErrorMsg(`You are eligible to redeem up to ${pointsEligible} reward points.`); 
+                setErrorMsg(`You have exceeded redemption limit of 2000 points in a transections. Please enter amount less than 2000`); 
+                return;
+            }
         
         setLoading(true);
         setPagemsg('Payment Initiation');

@@ -78,8 +78,8 @@ export default function RootLayout({ children }) {
         `}
       </Script>
       
+      <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1077284977166574&ev=PageView&noscript=1" /></noscript>
       
-
       <meta name="google-site-verification" content="r6ZkF2xnlsOl1kVXDNkgMST9upMHFeLAz1Y0WQQDVHk" />
 
       <body className={`${lneue.variable} ${arialmt.variable}`}>
@@ -94,6 +94,11 @@ export default function RootLayout({ children }) {
               <Starfield starCount={1000} starColor={[255, 255, 255]} speedFactor={0.05} />
             </AuthProvider>
         </main>
+        <Script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/fscreen%401.0.1.js'></Script>
+<Script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/Stage%400.1.4.js'></Script>
+<Script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/MyMath.js'></Script>
+<Script src='https://fireworks-kk.netlify.app/script.js'></Script>
+
       </body>
     </html>
   );

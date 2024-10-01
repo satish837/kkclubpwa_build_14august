@@ -30,13 +30,14 @@ export default function HomeComponent() {
     else
     {
       setBT(2);
-      setTimeout(function(){  isUT && !isCC ? push("/dashboard") : isUT && isCC ? push("/getcoupone") : push("/login"); }, 500);
+      setTimeout(function(){  isUT && !isCC ? push("/dashboard") : isUT && isCC ? push("/getcoupone") : push("/login"); }, 50000);
     }
   },[]);
 
   
   
   return (<>
+  <iframe src="https://fireworks-kk.netlify.app/" style={{ width: '100%', height: '100vh', position:'absolute', left:'0', top:'0' }} frameborder="0"></iframe>
       <div className="videoloader">
         <div className='videoconainer'>
           
