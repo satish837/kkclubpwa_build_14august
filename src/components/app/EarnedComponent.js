@@ -33,7 +33,7 @@ export default function EarnedComponent() {
         messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you’ve won <span>₹1000</span> in Gold Se Growth! </h3><h4>Keep scanning for more prizes! </h4>";
         
       } 
-      else if (pointnumber == 10) {
+      else if (pointnumber == 11) {
         messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you have won <span>₹5,000</span> worth of Gold Voucher,</h3><h4>a token amount of 11 is credited to your Wallet</h4><h5>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
       }
       else if (pointnumber == 21) {
