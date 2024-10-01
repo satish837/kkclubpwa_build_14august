@@ -130,6 +130,7 @@ const handleQrCodeManually = (e) => {
           {
               toast.error("There is an issue while availing the coupon. kindly contact to the support team.");
               setTimeout(function(){window.location.reload(); },2000);
+              
           }
         }).catch((err) => {
           setLoading(false); 

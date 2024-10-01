@@ -79,6 +79,7 @@ export default function RootLayout({ children }) {
       </Script>
       
       
+
       <meta name="google-site-verification" content="r6ZkF2xnlsOl1kVXDNkgMST9upMHFeLAz1Y0WQQDVHk" />
 
       <body className={`${lneue.variable} ${arialmt.variable}`}>

@@ -6,6 +6,7 @@ import Loader from "../shared/LoaderComponent";
 import Link from 'next/link';
 import Image from 'next/image'
 import CountUp from 'react-countup';
+import { toast } from 'react-toastify';
 import TotalrewardpointsComponent from '../shared/TotalrewardpointsComponent';
 import { _get } from "@/config/apiClient";
 import HeaderDashboard from '../shared/HeaderDashboard';
@@ -24,20 +25,26 @@ export default function EarnedComponent() {
  
 
     useEffect(() => {
-      if (pointnumber === 1000) {
-        console.log(`Congratulation you have earned ${pointnumber} points and ${pointnumber} worth of Gold. You sales person will contact you for Gold delivery`);
+      console.log(pointnumber);
+
+      const messageDiv = document.getElementById('message');
+      
+      if (pointnumber == 1000) {
+        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you’ve won <span>₹1000</span> in Gold Se Growth! </h3><h4>Keep scanning for more prizes! </h4>";
         
-      } else if (pointnumber === 11) {
-        console.log(`Congratulation you have earned ${pointnumber} points and ${pointnumber} worth of Gold. You sales person will contact you for Gold delivery`);
+      } 
+      else if (pointnumber == 10) {
+        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you have won <span>₹5,000</span> worth of Gold Voucher,</h3><h4>a token amount of 11 is credited to your Wallet</h4><h5>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
       }
-      else if (pointnumber === 21) {
-        console.log(`Congratulation you have earned ${pointnumber} points and ${pointnumber} worth of Gold. You sales person will contact you for Gold delivery`);
+      else if (pointnumber == 21) {
+        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you have won <span>₹10,000</span> worth of Gold Voucher,</h3><h4> a token amount of 21 is credited to your Wallet</h4><h5>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
+        
       }
-      else if (pointnumber === 51) {
-        console.log(`Congratulation you have earned ${pointnumber} points and ${pointnumber} worth of Gold. You sales person will contact you for Gold delivery`);
+      else if (pointnumber == 51) {
+        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3> you have won <span>₹50,000</span> worth of Gold Voucher,</h3><h4>a token amount of 51 is credited to your Wallet</h4><h5>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
       }
-      else if (pointnumber === 101) {
-        console.log(`Congratulation you have earned ${pointnumber} points and ${pointnumber} worth of Gold. You sales person will contact you for Gold delivery`);
+      else if (pointnumber == 101) {
+        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3> you have won <span>₹1,00,000</span> worth of Gold Voucher, </h3><h4>a token amount of 101 is credited to your Wallet</h4><h5>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
       }
     }, [pointnumber])
     
@@ -67,11 +74,11 @@ export default function EarnedComponent() {
       <div className="screenmain screenqrcode" > 
         <div className="screencontainer">
 
-            <div className="earnepoints_content">
-                <h2>CONGRATULATIONS</h2>
+            <div className="earnepoints_content"  id='message'>
+                <h2>Congratulations</h2>
                 <h3>You have earned</h3>
                 <h4><CountUp duration={2} start={0}  delay={1}  end={pointnumber} /></h4>
-                <h5>points</h5>
+                <h5>points </h5>
 
                 <Image className="earnpoint_img1" src="/assets/images/v1.png"  width={64} height={64} alt="scanQR" quality={99}  />
                 <Image className="earnpoint_img2" src="/assets/images/V2.png"  width={123} height={123} alt="scanQR" quality={99}  />
