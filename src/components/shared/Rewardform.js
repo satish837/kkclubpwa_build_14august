@@ -122,7 +122,7 @@ export default function Rewardform() {
         }
         if(parseInt(redeempoint) > rewardspoints)
         {
-            setErrorMsg(`You can redeem maximum ${pointsEligible} reward points.`); 
+            setErrorMsg(`You can redeem maximum ${rewardspoints} reward points.`); 
             return;
         }
         if(parseInt(redeempoint) > redeemmaximumpoint)
@@ -136,7 +136,7 @@ export default function Rewardform() {
             setErrorMsg(`You have exceeded redemption limit of ${redeemmaximumpoint} points in a day. Please come back tomorrow.`); 
             return;
         }
-        if(!isEligible || parseInt(redeempoint) > parseInt(pointsEligible) && parseInt(redeempoint) > 2000)
+            if (!isEligible || parseInt(redeempoint) <= 0 || parseInt(redeempoint) > 2000) 
             {
                 // setErrorMsg(`You are eligible to redeem up to ${pointsEligible} reward points.`); 
                 setErrorMsg(`You have exceeded redemption limit of 2000 points in a transections. Please enter amount less than 2000`); 
