@@ -1,5 +1,6 @@
 "use client";
 import Image from 'next/image';
+import Link from 'next/link';
 import { toast } from 'react-toastify';
 import { useRef, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -110,10 +111,19 @@ useEffect(() => {
     <div className="lamp4"><Image src="/assets/images/lamp1.png" width={57} height={79} alt="Lamp" quality={100} /></div>
     <div className="lamp5"><Image src="/assets/images/lamp3.png" width={57} height={79} alt="Lamp" quality={100} /></div>
     <div className="lamp6"><Image src="/assets/images/lamp.png" width={57} height={79} alt="Lamp" quality={100} /></div>
+    <div className="lamp7"><Image src="/assets/images/lamp.png" width={57} height={79} alt="Lamp" quality={100} /></div>
+    <div className="lamp8"><Image src="/assets/images/lamp.png" width={57} height={79} alt="Lamp" quality={100} /></div>
+
     <div className="firework"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
     <div className="firework2"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
 
     <div className="firework3"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework4"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework5"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework6"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework7"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework8"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework9"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
 
     <div className="screenmain screendashboard"> 
       <div className="screencontainer">
@@ -132,6 +142,7 @@ useEffect(() => {
                     
                 </dl>
           </div>
+          <Link href="/goldsegrowth" className='gsg'>
           <div className='gold-se-growth-banner'>
             <div className="left">
               <div className="leaves">
@@ -177,9 +188,11 @@ useEffect(() => {
   <i></i>
   </div>
   <div className="diya"><Image src="/assets/images/diya-right.png" width={129} height={116} alt="diya" quality={100} /></div>
-
             </div>
-          </div>
+            
+          </div></Link>
+          <div className="tnc"><Link href="/assets/pdf/Kerakoll-Gold-Se-Growth-Campaign-Terms-and-Conditions.pdf" target="_blank" locale={false} rel="noopener noreferrer">*Terms and Conditions</Link></div>
+
           <div className="dashboard_content">
               <section className='dashboard_scanbg' onClick={()=> push("/scanqrcode")}>
                     <aside><Image className='dashboard_scan_img' src="/assets/images/dash-qr.png" width={100} height={100} alt="qr" quality={100} /></aside>

@@ -7,6 +7,7 @@ import Loader from "../shared/LoaderComponent";
 import { ipaddress, osdetails, browserdetails, geoLatitude, geoLongitude } from "../core/jio";
 import { toast } from 'react-toastify';
 import Link from 'next/link';
+import Image from 'next/image';
 import CountUp from 'react-countup';
 import TotalrewardpointsComponent from '../shared/TotalrewardpointsComponent';
 import { _post } from "@/config/apiClient";
@@ -145,6 +146,13 @@ const handleQrCodeManually = (e) => {
       <ErrorBoundary>
         <HeaderDashboard />
       </ErrorBoundary>
+      <div className="firework3"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework4"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework5"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework6"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework7"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework8"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework9"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
       <div className="screenmain screenqrcode" > 
         <div className="screencontainer">
           { couponecode !== '' ? <>

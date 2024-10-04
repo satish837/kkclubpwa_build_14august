@@ -172,16 +172,16 @@ body { background-color: #191919; margin:0;padding:0;box-sizing:border-box;line-
 }
 .lamp2 {
   position: absolute;
-  left: 46%;
-  top: 40%;
+  right: 14%;
+  top: 62%;
   width: 6%;
   box-sizing: border-box;
   overflow: hidden;
   transform: translatey(0px);
   -webkit-animation: lamp-float 20s ease-in-out infinite;
-          animation: lamp-float 20s ease-in-out infinite;
-          z-index: 2;
-          transition: all 0.3s
+  animation: lamp-float 20s ease-in-out infinite;
+  z-index: 2;
+  transition: all 0.3s
 }
 .lamp2 img {
   width: 100%;
@@ -240,6 +240,40 @@ body { background-color: #191919; margin:0;padding:0;box-sizing:border-box;line-
   width: 100%;
   height: auto;
 }
+.lamp7 {
+  position: absolute;
+  left: 5%;
+  top: 80%;
+  width: 7%;
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: translatey(0px);
+  -webkit-animation: lamp-float 18s ease-in-out infinite;
+          animation: lamp-float 18s ease-in-out infinite;
+          z-index: 2;
+          transition: all 0.3s
+}
+.lamp7 img {
+  width: 100%;
+  height: auto;
+}
+.lamp8 {
+  position: absolute;
+  right: 0%;
+  top: 90%;
+  width: 7%;
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: translatey(0px);
+  -webkit-animation: lamp-float 18s ease-in-out infinite;
+          animation: lamp-float 18s ease-in-out infinite;
+          z-index: 2;
+          transition: all 0.3s
+}
+.lamp8 img {
+  width: 100%;
+  height: auto;
+}
 
 .hanging-lights{
   position: absolute;
@@ -279,9 +313,10 @@ body { background-color: #191919; margin:0;padding:0;box-sizing:border-box;line-
 }
 
 .gold-se-growth-banner{
+  position: relative;
   width: 100%;
   background: #555a72;
-  margin: 0 0 4rem 0;
+  margin: 0 0 0 0;
   padding: 0;
   float: left;
   display: flex;
@@ -308,7 +343,7 @@ min-height: 200px;
   height: auto;
 }
 .gold-se-growth-banner .mid{
-  width: 65%;
+  width: 68%;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -340,6 +375,7 @@ min-height: 200px;
   left: 0;
   top: 30%;
   animation: circleScale 3s infinite;
+  animation-delay: 0.5s;
 
 }
 .firework img{
@@ -353,6 +389,7 @@ min-height: 200px;
   right: 0%;
   top: 60%;
   animation: circleScale 3s infinite;
+  animation-delay: 1s;
 }
 .firework2 img{
   width: 100%;
@@ -365,8 +402,91 @@ min-height: 200px;
   left: 0;
   top: 80%;
   animation: circleScale 3s infinite;
+  animation-delay: 1.5s;
 }
 .firework3 img{
+  width: 100%;
+  height: auto;
+}
+.firework4{
+  width: 20%;
+  margin: 0;
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  animation: circleScale 3s infinite;
+  animation-delay: 2s;
+}
+.firework4 img{
+  width: 100%;
+  height: auto;
+}
+.firework5{
+  width: 8%;
+  margin: 0;
+  position: absolute;
+  left: 45%;
+  top: 57%;
+  animation: circleScale 3s infinite;
+  animation-delay: 1s;
+}
+.firework5 img{
+  width: 100%;
+  height: auto;
+}
+.firework6{
+  width: 8%;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 15%;
+  animation: circleScale 3s infinite;
+  animation-delay: 0.5s;
+
+}
+.firework6 img{
+  width: 100%;
+  height: auto;
+}
+.firework7{
+  width: 8%;
+  margin: 0;
+  position: absolute;
+  left: 65%;
+  top: 18%;
+  animation: circleScale 3s infinite;
+  animation-delay: 1.8s;
+
+}
+.firework7 img{
+  width: 100%;
+  height: auto;
+}
+.firework8{
+  width: 8%;
+  margin: 0;
+  position: absolute;
+  right: 10%;
+  top: 100%;
+  animation: circleScale 3s infinite;
+  animation-delay: 1.2s;
+
+}
+.firework8 img{
+  width: 100%;
+  height: auto;
+}
+.firework9{
+  width: 16%;
+  margin: 0;
+  position: absolute;
+  right: 50%;
+  top: 101%;
+  animation: circleScale 3s infinite;
+  animation-delay: 0.6s;
+
+}
+.firework9 img{
   width: 100%;
   height: auto;
 }
@@ -408,6 +528,19 @@ min-height: 200px;
   width: 100%;
   text-align: center;
   font-family: var(--font-arialmt);
+}
+ .tnc{
+  width: 100%;
+  text-align: left;
+  font-size: 2vw;
+  padding-top: 0.5rem;
+  margin-bottom: 4rem;
+  padding: 0.5rem 1rem;
+  float: left;
+}
+.tnc a{
+  color: #fff;
+  text-decoration: underline;
 }
 .gold-se-growth-banner .right{
   width: 18%;
@@ -667,8 +800,8 @@ min-height: 200px;
 
 /* ################### screen ################### */
 .main { display: flow-root;  width:100%; max-width:1024px; margin: 0 auto; float: none; padding:120px 0 0 0; }
-.outsidescreen { width: 100%; min-height:calc(100vh - 120px); float: left; padding:0; background-color:#000;  background: url('../images/design_full_black.png') no-repeat center top; background-size:auto 90%;  }
-.outsiderewads { width: 100%; min-height:calc(100vh - 120px); float: left; padding:0;   background-image: url('../images/design_bott_part.png'); background-repeat: no-repeat; background-position: center top -70px; background-size: 100% auto;  }
+.outsidescreen { width: 100%; min-height:calc(100vh - 120px); float: left; padding:0; background-size:auto 90%;  }
+.outsiderewads { width: 100%; min-height:calc(100vh - 120px); float: left; padding:0;    }
 
 .screenmain { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; width: 100%; min-height:calc(100vh - 160px); float: left;  padding:2rem 3rem 5rem 3rem; box-sizing: border-box; position: relative; z-index: 5; }
 .screenmain.screendashboard { min-height: auto;  }
@@ -933,8 +1066,8 @@ min-height: 200px;
 }
 
 .dashboard_content  { width: 100%; float: left; margin:0 0 3rem 0; padding: 0;  box-sizing: border-box; display: flex; justify-content: space-between; align-items: stretch; }
-.dashboard_content section  {width: 48%;float: left;margin:0;padding:3rem 1rem;box-sizing: border-box;border: solid 2px #e1bf7a;background-color: rgba(0,0,0,0.5);}
-.dashboard_content section.dashboard_redeempointbg {cursor: pointer;background: rgba(0,0,0,0.5) url('../images/design_full.png') no-repeat;background-position: top -3rem center;background-size: auto 90%;}
+.dashboard_content section  {width: 48%;float: left;margin:0;padding:3rem 1rem;box-sizing: border-box;border: solid 2px #e1bf7a;background-color: #1f2231;}
+.dashboard_content section.dashboard_redeempointbg {cursor: pointer;background: #1f2231 url('../images/design_full.png') no-repeat;background-position: top -3rem center;background-size: auto 90%;}
 .dashboard_content section.dashboard_scanbg { position: relative; }
 .dashboard_content section.dashboard_scanbg:after { content: ''; z-index: 1; position: absolute; left: 0; bottom: 0; width: 100%; height: 3px; background-color: #191919; font-size: 0; line-height: 1; }
 .dashboard_content section.dashboard_scanbg:before { content: ''; z-index: 1; position: absolute; left: 0; bottom:3px; width: 100%; height:6px; background-color:#e1bf7a; font-size: 0; line-height: 1; }
@@ -1076,7 +1209,7 @@ min-height: 200px;
 .profile_status dl dt.status_approve { background-color:#e1bf7a; }
 .profile_status dl dt.status_pending { background: #b6b5b5; }
 .profile_status dl dd { width: calc(100% - 150px); margin:0; }
-.profile_status dl dd h2 { display: block; width: 100%; float: left; margin:0; padding:0; text-align: left;  font-weight: bold; color: #e1bf7a; font-size:32px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-transform: uppercase; }
+.profile_status dl dd h2 { display: block; width: 100%; float: left; margin:0; padding:0; text-align: left;  font-weight: bold; color: #e1bf7a; font-size:32px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-transform: uppercase; line-height: 1.2;}
 .profile_status dl dd p { display: block; width: 100%; float: left; margin:0; padding:0.5rem 0 0 0; text-align: left;  font-weight: 600; color:#e1bf7a; font-size:18px; text-transform: uppercase; }
 .profile_status dl dd p b { font-size: 90%; font-weight: 400; color:#fff;  }
 .profile_status dl dd p span { text-transform: uppercase; }
@@ -1104,6 +1237,83 @@ min-height: 200px;
 .redeemcontainer aside { width: 100%; float: left; margin:0; padding:0; text-align:center;  }
 .redeemcontainer aside img { display: inline-block; width:100%; max-width:400px; height: auto; float: none; margin:0 auto; padding:0;  }
 .redeemcontainer h2 { width: 100%; float: left; margin:3rem 0 0 0; padding:0; text-align: left;  font-weight: normal; color:#F5EFEB; font-size:30px;  }
+.redeemcontainer.goldsegrowth h2 { width: 100%; float: left; margin:3rem 0 0 0; padding:0; text-align: center;  font-weight: bold; font-size:10vw; color: #e5c88d; font-family: var(--font-lneue);  }
+.redeemcontainer.goldsegrowth .card-cont{
+  width: 100%; 
+  margin: 2rem 0;
+  padding: 0px;
+  float: left;
+}
+.redeemcontainer.goldsegrowth .card-cont ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  float: left;
+}
+.gsg{
+  text-decoration: none;
+}
+.redeemcontainer.goldsegrowth .card-cont ul li{
+  width: 45%;
+  margin: 1rem 0;
+  padding: 0px;
+  border: 2px dashed #fff;
+  background: url(../images/card-bg.png) center -2rem no-repeat;
+  background-size: 100%;
+  padding: 1.5rem 0.5rem;
+}
+.redeemcontainer.goldsegrowth .card-cont ul li h3{
+  text-align: center;
+  width: 100%; 
+  margin:0.5rem 0; 
+  padding:0; 
+  text-align: center;  
+  font-weight: bold; 
+  font-size:8vw; 
+  color: #e5c88d; 
+  font-family: var(--font-lneue); 
+}
+.redeemcontainer.goldsegrowth .card-cont ul li h3 span{
+  font-size: 3vw;
+}
+.redeemcontainer.goldsegrowth .card-cont ul li h4{
+  text-align: center;
+  width: 100%; 
+  margin:0rem 0; 
+  padding:0; 
+  text-align: center;  
+  font-weight: bold; 
+  font-size:4vw; 
+  color: #e5c88d; 
+  font-family: var(--font-lneue); 
+  float: left;
+}
+.redeemcontainer.goldsegrowth .card-cont ul li h5{
+  text-align: center;
+  width: 100%; 
+  margin:0.5rem 0 0 0; 
+  padding:0; 
+  text-align: center;  
+  font-weight: bold; 
+  font-size:3vw; 
+  color: #a9a9ad; 
+  float: left;
+  text-transform: uppercase;
+}
+.redeemcontainer.goldsegrowth .card-cont ul li .icon{
+  width: 50%;
+  margin: 0px auto;
+  padding: 0;
+}
+.redeemcontainer.goldsegrowth .card-cont ul li .icon img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
 .redeemcontainer h3 {width: 100%; float: left; margin:1.5rem 0 0 0; padding:0; text-align: left;  font-weight: bold; color:#e1bf7a; font-size:80px;  text-shadow:5px 3px 4px #070C12; font-family:var(--font-lneue); }
 .redeemcontainer h3 b { font-weight: 400; font-size: 60%; }
 .redeemcontainer p {width: 100%; float: left; margin:1.5rem 0 0 0; padding:0; text-align: left;  font-weight: normal; color:rgba(245, 240, 235,0.8); font-size:22px;  }
@@ -1115,7 +1325,7 @@ min-height: 200px;
 .redeemforms button { width: 100%; display:block; float: left;  margin:2rem 0 0 0;  padding:1.1rem 2.5rem; box-sizing: border-box; text-align: center;  background:#F5F0EB;  font-weight: 700;  font-size: 22px;  color:#191919;  border: solid 2px #414141; transition: all 0.5s ease-out;  border-radius: 0;  text-decoration: none;   cursor: pointer; outline: none; text-transform: none; }
 .redeemforms button:hover { background: #e1bf7a;  color: #191919;   transition: all 0.5s ease-in; }
 
-.bankInfosavecontainer { width: 100%; float: left; }
+.bankInfosavecontainer {width: 100%;float: left;padding: 0 1rem;}
 .bankInfosavecontainer h2 { margin:0 0 1rem 0; padding:0; width: 100%; float: left; text-align: left; text-transform: none;  }
 .bankInfosavecontainer h2 em { display: block; font-style: normal; font-family:var(--font-lneue); font-weight: normal;color: #e1bf7a; font-size: 24px;  }
 .bankInfosavecontainer h2 span { display: block; margin-top: 0.5rem; color: #ddd; font-size: 18px; font-weight:normal; }
@@ -1255,7 +1465,7 @@ min-height: 200px;
   margin: 0;
   position: absolute;
   left: 0;
-  top: 80%;
+  top: 100%;
 }
 .firework3 img{
   width: 100%;
@@ -1434,6 +1644,9 @@ min-height: 200px;
 /* ################### profilecontainer ################### */
 .screenmain.redeemscreen {  padding: 0 5% 120px 5% !important; background-position:center top 100px, center top 100px;   }
 .redeemcontainer {  padding:0 0 4rem 0;  }
+.redeemcontainer.goldsegrowth{
+  padding: 0;
+}
 .rdm_1 { top: 35%; left: 0;width: 50px;}
 .rdm_2 { top: 22%; right: 0;width:50px;}
 .rdm_3 { top:40%; right:10%;width:48px;}
@@ -1482,7 +1695,7 @@ min-height: 200px;
 .outsidescreen {  min-height:calc(100vh - 90px); }
 .outsiderewads { min-height:calc(100vh - 90px);  }
 .screenmain {min-height:calc(100vh - 130px);padding: 1px 0 2rem 0;}
-.screenmain.screendashboardbottom { padding-top: 0 !important; }
+.screenmain.screendashboardbottom {padding-top: 0 !important;padding: 0 1rem 2rem;}
 
 
 /* ################### headersection ################### */
