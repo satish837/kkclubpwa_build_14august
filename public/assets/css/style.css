@@ -1237,7 +1237,7 @@ min-height: 200px;
 .redeemcontainer aside { width: 100%; float: left; margin:0; padding:0; text-align:center;  }
 .redeemcontainer aside img { display: inline-block; width:100%; max-width:400px; height: auto; float: none; margin:0 auto; padding:0;  }
 .redeemcontainer h2 { width: 100%; float: left; margin:3rem 0 0 0; padding:0; text-align: left;  font-weight: normal; color:#F5EFEB; font-size:30px;  }
-.redeemcontainer.goldsegrowth h2 { width: 100%; float: left; margin:3rem 0 0 0; padding:0; text-align: center;  font-weight: bold; font-size:10vw; color: #e5c88d; font-family: var(--font-lneue);  }
+.redeemcontainer.goldsegrowth h2 { width: 100%; float: left; margin:3rem 0 0 0; padding:0; text-align: center;  font-weight: bold; font-size:5vw; color: #e5c88d; font-family: var(--font-lneue);  }
 .redeemcontainer.goldsegrowth .card-cont{
   width: 100%; 
   margin: 2rem 0;
@@ -1273,12 +1273,12 @@ min-height: 200px;
   padding:0; 
   text-align: center;  
   font-weight: bold; 
-  font-size:8vw; 
+  font-size:5vw; 
   color: #e5c88d; 
   font-family: var(--font-lneue); 
 }
 .redeemcontainer.goldsegrowth .card-cont ul li h3 span{
-  font-size: 3vw;
+  font-size: 2vw;
 }
 .redeemcontainer.goldsegrowth .card-cont ul li h4{
   text-align: center;
@@ -1287,7 +1287,7 @@ min-height: 200px;
   padding:0; 
   text-align: center;  
   font-weight: bold; 
-  font-size:4vw; 
+  font-size:2vw; 
   color: #e5c88d; 
   font-family: var(--font-lneue); 
   float: left;
@@ -1299,7 +1299,7 @@ min-height: 200px;
   padding:0; 
   text-align: center;  
   font-weight: bold; 
-  font-size:3vw; 
+  font-size:1vw; 
   color: #a9a9ad; 
   float: left;
   text-transform: uppercase;
@@ -1438,6 +1438,30 @@ min-height: 200px;
 .outsiderewads {  background-position: center top -50px; background-size: 150% auto;  }
 .screenmain { min-height:calc(100vh - 140px); padding:2px 2em 4rem 2rem;  }
 .screenmain.screendashboardbottom { padding-top: 0 !important; }
+.redeemcontainer.goldsegrowth h2{
+  font-size: 10vw;
+}
+.redeemcontainer.goldsegrowth .card-cont ul li h3{
+  font-size:8cap; 
+}
+.redeemcontainer.goldsegrowth .card-cont ul li h3 span{
+  font-size: 3vw;
+}
+.redeemcontainer.goldsegrowth .card-cont ul li h4{
+  font-size:3vw; 
+}
+.redeemcontainer.goldsegrowth .card-cont ul li h5{
+  text-align: center;
+  width: 100%; 
+  margin:0.5rem 0 0 0; 
+  padding:0; 
+  text-align: center;  
+  font-weight: bold; 
+  font-size:1vw; 
+  color: #a9a9ad; 
+  float: left;
+  text-transform: uppercase;
+}
 .firework{
   width: 10%;
   margin: 0;
