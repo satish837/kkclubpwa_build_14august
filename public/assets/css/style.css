@@ -749,7 +749,7 @@ min-height: 200px;
 .numberedit { margin:-7px 0 0 0.7rem; width:22px; height:22px;   padding:0; font-size: 0; cursor: pointer; text-decoration: none;  background: url('../images/edit_icon.png') no-repeat center center; background-size: 100% 100%; }
 .numberedit:hover { color:#e1bf7a; text-decoration: underline;  filter: grayscale(100%); }
 .registerField { position: relative; width: 100%; float: left;text-align: center; margin-top:1.5rem;}
-.registertext { margin:0; padding:0.5rem 0 0 0; width: 100%; float: left; text-align: left; text-transform: none; font-weight: 500;color: rgba(175, 205, 175, 0.6); font-size: 18px; line-height: 1.2;  }
+.registertext { margin:0; padding:0.5rem 0 0 0; width: 100%; float: left; text-align: left; text-transform: none; font-weight: 500;color: #e1bf7a; font-size: 18px; line-height: 1.2;  }
 .registertext.registertextcenter { margin: 1rem 0 0 0; text-align: center; }
   input::-webkit-outer-spin-button { appearance: none;margin: 0;}
   input::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0;}
@@ -1003,7 +1003,7 @@ min-height: 200px;
 .rewardscontainer h3 b { font-weight: 400; }
 .norewardsavailable { width: 100%; float: left; margin:0; padding:4rem 0; text-align: center;  font-weight: 500;color: #e1bf7a; font-size:24px;   }
 .rewardstables {  width: 100%; float: left; margin:0; padding:3rem 0;  }
-.rewardstables h4 { width: 100%; float: left; margin:0; padding:0 3rem 2rem 3rem; text-align: left;  font-weight: normal; color:rgba(175, 205, 175,0.6); font-size:20px; }
+.rewardstables h4 { width: 100%; float: left; margin:0; padding:0 3rem 2rem 3rem; text-align: left;  font-weight: normal; color:#e1bf7a; font-size:20px; }
 .rewardstables ul { width: 100%; float: left; margin:0; padding:1rem 3rem 0 3rem;  background: url('../images/rewadsbg.png') no-repeat center top; background-size:100% 100%; }
 .rewardstables ul li { list-style: none; width: 100%; float: left; margin:0; box-sizing: border-box; display: flex; justify-content:flex-start; align-items: flex-start; }
 .rewardstables ul li p {  float: left; margin:0; padding:0;  padding:1rem 0.5rem; box-sizing: border-box; text-align: center; font-weight: 500; color:#F5EFEB; font-size:24px; word-break: break-all; }
@@ -1137,7 +1137,7 @@ min-height: 200px;
 .bankinfo aside:hover {  color: #fff; text-decoration: none; }
 
 .bankInfoField { position: relative; width: 100%; float: left; text-align: center; margin-top:1.5rem;}
-.bankInfoField p { margin:0; padding:0; width: 100%; float: left; text-align: left; text-transform: none; font-weight: 500;color: rgba(175, 205, 175, 0.6); font-size: 18px;  }
+.bankInfoField p { margin:0; padding:0; width: 100%; float: left; text-align: left; text-transform: none; font-weight: 500;color: #e1bf7a; font-size: 18px;  }
 .textUppercase { text-transform: uppercase; }
 .bankInfoField input {  float: left;  width: 100%;  padding: 0.5rem 1rem;  border: 0; border-bottom: solid 2px #F5F0EB; outline: none;  background:transparent;  border-radius: 0;  text-align: left; font-weight: 500;  color: rgba(245, 240, 235,0.6);  font-size:18px;  box-shadow:none; box-sizing: border-box; }
 .bankInfoField input:disabled {user-select: none; pointer-events: none;}
