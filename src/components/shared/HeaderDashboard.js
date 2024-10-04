@@ -62,6 +62,7 @@ return () => { setMounted2(false); }
   return (
     <div className='headercontainer'>
       <header className="headersection headerDashboard">
+      <div className='hanging-lights'><Image src="/assets/images/hanging-lights.png" width={1400} height={94} alt="lights" quality={100}/></div>
         <aside className="logo">
           <Image onClick={() => push("/dashboard") } src="/assets/images/logo.png" width={270} height={50} alt="logo" quality={99} />
         </aside>

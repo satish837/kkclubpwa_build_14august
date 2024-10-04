@@ -105,6 +105,16 @@ useEffect(() => {
       <ErrorBoundary>
         <HeaderDashboard />
       </ErrorBoundary>
+    <div className="lamp1"><Image src="/assets/images/lamp1.png" width={57} height={79} alt="Lamp" quality={100} /></div>
+    <div className="lamp2"><Image src="/assets/images/lamp2.png" width={46} height={60} alt="Lamp" quality={100} /></div>
+    <div className="lamp4"><Image src="/assets/images/lamp1.png" width={57} height={79} alt="Lamp" quality={100} /></div>
+    <div className="lamp5"><Image src="/assets/images/lamp3.png" width={57} height={79} alt="Lamp" quality={100} /></div>
+    <div className="lamp6"><Image src="/assets/images/lamp.png" width={57} height={79} alt="Lamp" quality={100} /></div>
+    <div className="firework"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+    <div className="firework2"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+
+    <div className="firework3"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
+
     <div className="screenmain screendashboard"> 
       <div className="screencontainer">
    
@@ -121,6 +131,54 @@ useEffect(() => {
                     </dt>
                     
                 </dl>
+          </div>
+          <div className='gold-se-growth-banner'>
+            <div className="left">
+              <div className="leaves">
+               <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  </div>
+  <div className="diya"><Image src="/assets/images/diya.png" width={129} height={116} alt="diya" quality={100} /></div>
+   </div>
+            <div className="mid">
+              <div className="head"><span>Gold se Growth</span></div>
+              <div className="subtext">Win Gold! <span>Every Scan, Every Second</span> </div>
+              <div className="desc">Scan the Kerakoll Club Coupon and stand a chance to win </div>
+            </div>
+            <div className='right'>
+            <div className="leaves">
+               <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  </div>
+  <div className="diya"><Image src="/assets/images/diya-right.png" width={129} height={116} alt="diya" quality={100} /></div>
+
+            </div>
           </div>
           <div className="dashboard_content">
               <section className='dashboard_scanbg' onClick={()=> push("/scanqrcode")}>

@@ -6,7 +6,7 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-const IP_ADDRESS = 'localhost'; // Listen on all available network interfaces
+const IP_ADDRESS = 'kkclubpwa-build-25-09-2024.vercel.app'; // Listen on all available network interfaces
 const PORT = 3000; // Change port to the port your Node.js application is running on
 const DOMAIN = 'testclub.kerakoll.com';
 
