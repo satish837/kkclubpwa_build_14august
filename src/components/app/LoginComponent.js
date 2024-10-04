@@ -55,8 +55,6 @@ export default function LoginComponent() {
     <div className="lamp4"><Image src="/assets/images/lamp1.png" width={57} height={79} alt="Lamp" quality={100} /></div>
     <div className="lamp5"><Image src="/assets/images/lamp3.png" width={57} height={79} alt="Lamp" quality={100} /></div>
     <div className="lamp6"><Image src="/assets/images/lamp.png" width={57} height={79} alt="Lamp" quality={100} /></div>
-    <div className="lamp7"><Image src="/assets/images/lamp.png" width={57} height={79} alt="Lamp" quality={100} /></div>
-    <div className="lamp8"><Image src="/assets/images/lamp.png" width={57} height={79} alt="Lamp" quality={100} /></div>
     <div className="firework"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
     <div className="firework2"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
 
@@ -64,9 +62,6 @@ export default function LoginComponent() {
     <div className="firework4"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
     <div className="firework5"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
     <div className="firework6"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
-    <div className="firework7"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
-    <div className="firework8"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
-    <div className="firework9"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
     <div className='screenmain'>
       <section className="screencontainer">
         { !isMobile ? <LoginPart isMobStatus={isMobStatus} getMobNumber={getMobNumber} phonenumber={phonenumber} /> :  <OtpPart isMobStatus={isMobStatus} getMobNumber={getMobNumber} phonenumber={phonenumber} /> }

@@ -532,7 +532,7 @@ min-height: 200px;
  .tnc{
   width: 100%;
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   padding-top: 0.5rem;
   margin-bottom: 4rem;
   padding: 0.5rem 1rem;
@@ -1442,7 +1442,7 @@ min-height: 200px;
   font-size: 10vw;
 }
 .redeemcontainer.goldsegrowth .card-cont ul li h3{
-  font-size:8cap; 
+  font-size:8vw; 
 }
 .redeemcontainer.goldsegrowth .card-cont ul li h3 span{
   font-size: 3vw;
@@ -1451,16 +1451,7 @@ min-height: 200px;
   font-size:3vw; 
 }
 .redeemcontainer.goldsegrowth .card-cont ul li h5{
-  text-align: center;
-  width: 100%; 
-  margin:0.5rem 0 0 0; 
-  padding:0; 
-  text-align: center;  
-  font-weight: bold; 
-  font-size:1vw; 
-  color: #a9a9ad; 
-  float: left;
-  text-transform: uppercase;
+  font-size:2.5vw; 
 }
 .firework{
   width: 10%;
