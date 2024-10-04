@@ -1262,7 +1262,7 @@ min-height: 200px;
   margin: 1rem 0;
   padding: 0px;
   border: 2px dashed #fff;
-  background: url(../images/card-bg.png) center -2rem no-repeat;
+  background:#1f2231 url(../images/card-bg.png) center -2rem no-repeat;
   background-size: 100%;
   padding: 1.5rem 0.5rem;
 }
