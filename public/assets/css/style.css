@@ -706,7 +706,7 @@ min-height: 200px;
   position: absolute;
   left: 0;
   top: -50px;
-  background: green;
+  background: #000000;
   z-index: 999;
 }
 .fireworks-points iframe{

@@ -80,7 +80,7 @@ export default function GoldseGrowth() {
             <div className="card-cont">
               <ul>
                 
-                {  pointhistory.map &&  pointhistory.filter((val) => val.earnedpoints > 10).map((val, index) => <li key={val.pointid}>
+                {  pointhistory.map &&  pointhistory.filter((val) => val.earnedpoints == 1000 || val.earnedpoints == 11 || val.earnedpoints == 21 || val.earnedpoints == 51 || val.earnedpoints == 101 ).map((val, index) => <li key={val.pointid}>
                 <div className="icon"><Image src="/assets/images/coupon-icon.png" width={175} height={174} alt="redeem img" quality={100} /></div>
                             <h3>{ val.earnedpoints }<span>pt</span></h3>
                             <h4>Redeem Points</h4>

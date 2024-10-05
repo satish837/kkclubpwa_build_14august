@@ -30,7 +30,7 @@ export default function HomeComponent() {
     else
     {
       setBT(2);
-      setTimeout(function(){  isUT && !isCC ? push("/dashboard") : isUT && isCC ? push("/getcoupone") : push("/login"); }, 9000);
+      setTimeout(function(){  isUT && !isCC ? push("/dashboard") : isUT && isCC ? push("/getcoupone") : push("/login"); }, 10000);
     }
   },[]);
 

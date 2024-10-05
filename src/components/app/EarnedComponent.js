@@ -28,7 +28,7 @@ export default function EarnedComponent() {
 
       setTimeout(function() {
         div.style.display = "none";  // Hide the div after 20 seconds
-      }, 5000);  // 20000 milliseconds = 5 seconds
+      }, 9000);  // 20000 milliseconds = 5 seconds
     }
  
 
