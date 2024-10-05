@@ -35,35 +35,35 @@ export default function EarnedComponent() {
         fireDiv.classList.add("visible");
         setTimeout(function() {
           fireDiv.classList.remove("visible");
-      }, 8000);
+      }, 10000);
       } 
-      else if (pointnumber == 10) {
+      else if (pointnumber == 11) {
         messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you have won <span>₹5,000</span> worth of Gold Voucher,</h3><h4 class='dw'>a token amount of 11 is credited to your Wallet</h4><h5 class='dw'>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
         fireDiv.classList.add("visible");
         setTimeout(function() {
           fireDiv.classList.remove("visible");
-      }, 8000);
+      }, 10000);
       }
       else if (pointnumber == 21) {
         messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you have won <span>₹10,000</span> worth of Gold Voucher,</h3><h4 class='dw'>a token amount of 21 is credited to your Wallet</h4><h5 class='dw'>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
         fireDiv.classList.add("visible");
         setTimeout(function() {
           fireDiv.classList.remove("visible");
-      }, 8000);
+      }, 10000);
       }
       else if (pointnumber == 51) {
         messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3> you have won <span>₹50,000</span> worth of Gold Voucher,</h3><h4 class='dw'>a token amount of 51 is credited to your Wallet</h4><h5 class='dw'>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
         fireDiv.classList.add("visible");
         setTimeout(function() {
           fireDiv.classList.remove("visible");
-      }, 8000);
+      }, 10000);
       }
       else if (pointnumber == 101) {
         messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3> you have won <span>₹1,00,000</span> worth of Gold Voucher, </h3><h4 class='dw'>a token amount of 101 is credited to your Wallet</h4><h5 class='dw'>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
         fireDiv.classList.add("visible");
         setTimeout(function() {
           fireDiv.classList.remove("visible");
-      }, 8000);
+      }, 10000);
       }
     }, [pointnumber])
     
