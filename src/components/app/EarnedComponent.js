@@ -22,6 +22,14 @@ export default function EarnedComponent() {
     const { push } = useRouter();
     const params = useParams()
     
+    function showDiv() {
+      let div = document.getElementById("fireworks-cont");
+      div.style.display = "block";  // Show the div
+
+      setTimeout(function() {
+        div.style.display = "none";  // Hide the div after 20 seconds
+      }, 5000);  // 20000 milliseconds = 5 seconds
+    }
  
 
     useEffect(() => {
@@ -30,21 +38,25 @@ export default function EarnedComponent() {
       const messageDiv = document.getElementById('message');
       
       if (pointnumber == 1000) {
-        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you’ve won <span>₹1000</span> in Gold Se Growth! </h3><h4>Keep scanning for more prizes! </h4>";
+        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you’ve won <span>₹1000</span> in Gold Se Growth! </h3><h4 class='dw'>Keep scanning for more prizes! </h4>";
         
       } 
       else if (pointnumber == 11) {
-        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you have won <span>₹5,000</span> worth of Gold Voucher,</h3><h4>a token amount of 11 is credited to your Wallet</h4><h5>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
+        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you have won <span>₹5,000</span> worth of Gold Voucher,</h3><h4 class='dw'>a token amount of 11 is credited to your Wallet</h4><h5 class='dw'>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
+        showDiv();
       }
       else if (pointnumber == 21) {
-        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you have won <span>₹10,000</span> worth of Gold Voucher,</h3><h4> a token amount of 21 is credited to your Wallet</h4><h5>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
+        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you have won <span>₹10,000</span> worth of Gold Voucher,</h3><h4 class='dw'>a token amount of 21 is credited to your Wallet</h4><h5 class='dw'>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
+        showDiv();
         
       }
       else if (pointnumber == 51) {
-        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3> you have won <span>₹50,000</span> worth of Gold Voucher,</h3><h4>a token amount of 51 is credited to your Wallet</h4><h5>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
+        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3> you have won <span>₹50,000</span> worth of Gold Voucher,</h3><h4 class='dw'>a token amount of 51 is credited to your Wallet</h4><h5 class='dw'>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
+        showDiv();
       }
       else if (pointnumber == 101) {
-        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3> you have won <span>₹1,00,000</span> worth of Gold Voucher, </h3><h4>a token amount of 101 is credited to your Wallet</h4><h5>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
+        messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3> you have won <span>₹1,00,000</span> worth of Gold Voucher, </h3><h4 class='dw'>a token amount of 101 is credited to your Wallet</h4><h5 class='dw'>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
+        showDiv();
       }
     }, [pointnumber])
     
@@ -113,7 +125,17 @@ export default function EarnedComponent() {
             </h2>
             <p><Link href='/rewards'>check your club wallet</Link></p>
         </div>
-        
+        <div id="fireworks-cont" className='fireworks-points'>
+        <iframe
+        src="https://fireworks-kk.netlify.app/fireworks1"
+        title="Fireworks"
+        width="100%"
+        height="100vh"
+        frameBorder="0"
+        className='fireframe'
+        allowFullScreen
+      />
+  </div>
       </div> 
 
       <FooterComponent />

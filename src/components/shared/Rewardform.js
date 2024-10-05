@@ -149,6 +149,9 @@ export default function Rewardform() {
                 {
                     setErrorMsg(res.data.message); 
                 }
+                if (res.data.isActive == 0) {
+                    toast.info('Your account is blocked due to three wrong attempts. Please connect with your respective sales person.'); 
+                }
                 else
                 {
                     setErrorMsg(res.data.data.error);

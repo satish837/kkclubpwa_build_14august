@@ -1,12 +1,51 @@
 "use client";
+import { useEffect, useState } from "react";
 import Image from 'next/image';
+import { getUserID } from "@/config/userauth";
+import Loader from "../shared/LoaderComponent";
+import TotalrewardpointsComponent from '../shared/TotalrewardpointsComponent';
+import CountUp from 'react-countup';
 import { _get } from "@/config/apiClient";
-import HeaderDashboard from '../shared/HeaderDashboard';
-import FooterComponent from '../shared/FooterComponent';
-import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
+import HeaderDashboard from "../shared/HeaderDashboard";
+import FooterComponent from "../shared/FooterComponent";
+import { ErrorBoundary } from "next/dist/client/components/error-boundary";
 
 export default function GoldseGrowth() {
-
+    const [pagemsg, setPagemsg] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [mounted, setMounted] = useState(true);
+    const [pointhistory, setPointhistory] = useState({});
+    const [nodata, setNodata] = useState('');
+    const userID = getUserID();
+   
+    
+    useEffect(() => {
+        setLoading(true);
+        setPagemsg('Reward history fetching');
+        _get("Customer/UserRewardPointsHistory?userid="+ userID)
+        .then((res) => {
+            console.log("UserRewardPointsHistory - response - ", res);
+            setLoading(false);
+            if (mounted)
+            {
+              if(res.data.result.length !== 0)
+              {
+                setPointhistory(res.data.result)
+              }
+              else
+              {
+                setNodata('Reward history not available.');
+              }
+            }
+        }).catch((error) => {
+            setLoading(false);
+           // console.log("UserRewardPointsHistory - error - ", error);
+           console.log(error.message);
+        });
+        return () => { setMounted(false); }
+      }, [userID]);
+    
+     const points = TotalrewardpointsComponent();
 
    
   return (<>
@@ -35,34 +74,21 @@ export default function GoldseGrowth() {
                     <Image src="/assets/images/growth.png" width={459} height={448} alt="redeem img" quality={99} />
                 </aside>
                 <h2>Gold se Growth</h2>
-                <div className="card-cont">
-                    <ul>
-                        <li>
-                            <div className="icon"><Image src="/assets/images/coupon-icon.png" width={175} height={174} alt="redeem img" quality={100} /></div>
-                            <h3>1000<span>pt</span></h3>
+                
+
+                { nodata ? <div className="norewardsavailable">{nodata}</div> : (
+            <div className="card-cont">
+              <ul>
+                
+                {  pointhistory.map &&  pointhistory.filter((val) => val.earnedpoints > 10).map((val, index) => <li key={val.pointid}>
+                <div className="icon"><Image src="/assets/images/coupon-icon.png" width={175} height={174} alt="redeem img" quality={100} /></div>
+                            <h3>{ val.earnedpoints }<span>pt</span></h3>
                             <h4>Redeem Points</h4>
                             <h5>in your club wallet</h5>
-                        </li>
-                        <li>
-                            <div className="icon"><Image src="/assets/images/coupon-icon.png" width={175} height={174} alt="redeem img" quality={100} /></div>
-                            <h3>5000<span>pt</span></h3>
-                            <h4>Redeem Points</h4>
-                            <h5>in your club wallet</h5>
-                        </li>
-                        <li>
-                            <div className="icon"><Image src="/assets/images/coupon-icon.png" width={175} height={174} alt="redeem img" quality={100} /></div>
-                            <h3>50000<span>pt</span></h3>
-                            <h4>Redeem Points</h4>
-                            <h5>in your club wallet</h5>
-                        </li>
-                        <li>
-                            <div className="icon"><Image src="/assets/images/coupon-icon.png" width={175} height={174} alt="redeem img" quality={100} /></div>
-                            <h3>100000<span>pt</span></h3>
-                            <h4>Redeem Points</h4>
-                            <h5>in your club wallet</h5>
-                        </li>
-                    </ul>
-                </div>
+                </li>) }
+              </ul>
+            </div>
+            )}
             </div>  
             
             

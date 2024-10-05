@@ -168,6 +168,7 @@ useEffect(() => {
               <div className="head"><span>Gold se Growth</span></div>
               <div className="subtext">Win Gold! <span>Every Scan, Every Second</span> </div>
               <div className="desc">Scan the Kerakoll Club Coupon and stand a chance to win </div>
+              <div className="cta">View More</div>
             </div>
             <div className='right'>
             <div className="leaves">

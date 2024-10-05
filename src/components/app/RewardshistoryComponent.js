@@ -24,7 +24,7 @@ export default function RewardshistoryComponent () {
     setPagemsg('Reward history fetching');
     _get("Customer/UserRewardPointsHistory?userid="+ userID)
     .then((res) => {
-       // console.log("UserRewardPointsHistory - response - ", res);
+        console.log("UserRewardPointsHistory - response - ", res);
         setLoading(false);
         if (mounted)
         {

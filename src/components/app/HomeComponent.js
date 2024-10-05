@@ -38,8 +38,8 @@ export default function HomeComponent() {
   
   return (<>
    <iframe
-        src="https://fireworks-kk.netlify.app/"
-        title="Example Website"
+        src="https://fireworks-kk.netlify.app/landing"
+        title="Fireworks"
         width="100%"
         height="100vh"
         frameBorder="0"
