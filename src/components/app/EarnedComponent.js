@@ -37,7 +37,7 @@ export default function EarnedComponent() {
           fireDiv.classList.remove("visible");
       }, 8000);
       } 
-      else if (pointnumber == 11) {
+      else if (pointnumber == 10) {
         messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you have won <span>₹5,000</span> worth of Gold Voucher,</h3><h4 class='dw'>a token amount of 11 is credited to your Wallet</h4><h5 class='dw'>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
         fireDiv.classList.add("visible");
         setTimeout(function() {
