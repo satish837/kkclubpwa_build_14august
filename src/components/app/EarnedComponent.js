@@ -26,7 +26,9 @@ export default function EarnedComponent() {
       //console.log(pointnumber);
       setTimeout(function() {
         message.classList.remove("show");
+        epscan.classList.remove("show");
     }, 5000);
+      const epscan = document.getElementById('earnepoints_scan');
       const messageDiv = document.getElementById('message');
       const fireDiv = document.getElementById('fireworks-cont');
       if (pointnumber == 1000) {
@@ -117,7 +119,7 @@ export default function EarnedComponent() {
 
         </div>
 
-        <div className="earnepoints_scan">
+        <div className="earnepoints_scan show" id='earnepoints_scan'>
                 <aside  onClick={()=> push("/scanqrcode")}> 
                   <Image src="/assets/images/scanQR.png"  width={139} height={138} alt="scanQR" quality={99}  />
                 </aside>

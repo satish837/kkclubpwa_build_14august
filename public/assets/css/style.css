@@ -1235,6 +1235,9 @@ min-height: 200px;
 .earnpoint_img4 { width: 35px; right:15%; bottom: 50px; animation: rotater 7s linear infinite;  }
 
 .earnepoints_scan { width: 100%; float: left; margin:150px 0 1rem 0; padding: 0; }
+.earnepoints_scan.show{
+  display: none;
+}
 .earnepoints_scan aside { width: 100%; float: left; text-align: center;  }
 .earnepoints_scan aside img { background-color: #363636; padding:0.5rem; border: 0; width: 90px; height: 90px; margin: 0 auto; display: inline-block; float: none; float: none;  transform:scale(1); transition: all 0.5s ease-out;  }
 .earnepoints_scan aside:hover img { transform:scale(1.1); transition: all 0.5s ease-in; }
