@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useRef } from 'react';
 import Image from 'next/image';
 import { getUserID } from "@/config/userauth";
 import Loader from "../shared/LoaderComponent";
@@ -17,14 +18,14 @@ export default function GoldseGrowth() {
     const [pointhistory, setPointhistory] = useState({});
     const [nodata, setNodata] = useState('');
     const userID = getUserID();
-   
-    
+
     useEffect(() => {
         setLoading(true);
         setPagemsg('Reward history fetching');
         _get("Customer/UserRewardPointsHistory?userid="+ userID)
         .then((res) => {
             console.log("UserRewardPointsHistory - response - ", res);
+            
             setLoading(false);
             if (mounted)
             {
@@ -44,6 +45,7 @@ export default function GoldseGrowth() {
         });
         return () => { setMounted(false); }
       }, [userID]);
+
     
      const points = TotalrewardpointsComponent();
 

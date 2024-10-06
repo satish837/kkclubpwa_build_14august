@@ -719,6 +719,16 @@ min-height: 200px;
   display: block;
 }
 
+@keyframes counter {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 /* ################### loader ################### */
 .loader {display: block;position: fixed;left: 0;top: 0;z-index: 9;width: 100%;height: 100%;margin: 0;padding: 0;background: #000000; background: rgba(0, 0, 0, 0.8);text-align: center;}
 .loader div { position: absolute; left: 50%;top: 50%; transform: translate(-50%, -50%); width: 260px; height: auto; display: flex; justify-content: center; align-items: center; flex-direction: column; }
@@ -1210,7 +1220,7 @@ min-height: 200px;
 
 
 /* ################### earnepoints ################### */
-.earnepoints_content { position: relative; width: 100%; float: left; margin:100px 0 0 0; padding: 100px 1rem 0 1rem; }
+.earnepoints_content { position: relative; width: 100%; float: left; margin:100px 0 0 0; padding: 100px 1rem 0 1rem; animation: counter 1s ease 5s 1 normal forwards; }
 .earnepoints_content h2 { display: block; width: 100%; float: left; margin:0; padding:0; text-align: center;  font-weight: bold; color: #e1bf7a; font-size:42px; font-family:var(--font-lneue);  }
 .earnepoints_content h3 { display: block; width: 100%; float: left; margin:0; padding:1rem 0; text-align: center;  font-weight: 500; color: #fff; font-size:27px; }
 .earnepoints_content h4 {display: block;width: 100%;float: left;margin:0;padding: 0;text-align: center;font-weight: bold;color: #e1bf7a;font-size:35px;font-family:var(--font-lneue);}
@@ -1432,6 +1442,7 @@ min-height: 200px;
 {
 /* ################### earnepoints ################### */
 .earnepoints_content {   margin:50px 0rem 0 0; padding: 0 1rem;   }
+.earnepoints_content.show{display: none;}
 .earnepoints_scan { margin:150px 0 1rem 0; }
 
 .gold-se-growth-banner .mid .head {

@@ -20,16 +20,15 @@ export default function EarnedComponent() {
     const [pointnumber, setPointnumber] = useState(0);
     const rewardspoints = TotalrewardpointsComponent();
     const { push } = useRouter();
-    const params = useParams()
-   
- 
+    const params = useParams();
 
     useEffect(() => {
       //console.log(pointnumber);
-
+      setTimeout(function() {
+        message.classList.remove("show");
+    }, 5000);
       const messageDiv = document.getElementById('message');
       const fireDiv = document.getElementById('fireworks-cont');
-      
       if (pointnumber == 1000) {
         messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you’ve won <span>₹1000</span> in Gold Se Growth! </h3><h4 class='dw'>Keep scanning for more prizes! </h4>";
         fireDiv.classList.add("visible");
@@ -37,11 +36,12 @@ export default function EarnedComponent() {
           fireDiv.classList.remove("visible");
       }, 10000);
       } 
-      else if (pointnumber == 11) {
+      else if (pointnumber == 10) {
         messageDiv.innerHTML = "<h6>Diwali Bonanza Gold Se Growth!</h6><h2>Congratulations</h2><h3>you have won <span>₹5,000</span> worth of Gold Voucher,</h3><h4 class='dw'>a token amount of 11 is credited to your Wallet</h4><h5 class='dw'>Our sales Team will contact you for the delivery of the Gold Voucher.</h5>";
         fireDiv.classList.add("visible");
         setTimeout(function() {
           fireDiv.classList.remove("visible");
+
       }, 10000);
       }
       else if (pointnumber == 21) {
@@ -103,7 +103,7 @@ export default function EarnedComponent() {
       <div className="screenmain screenqrcode" > 
         <div className="screencontainer">
 
-            <div className="earnepoints_content"  id='message'>
+            <div className="earnepoints_content show"  id='message'>
                 <h2>Congratulations</h2>
                 <h3>You have earned</h3>
                 <h4><CountUp duration={2} start={0}  delay={1}  end={pointnumber} /></h4>
