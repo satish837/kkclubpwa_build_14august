@@ -718,6 +718,7 @@ min-height: 200px;
 .fireworks-points.visible{
   display: block;
 }
+.earnepoints_content.show{display: none;}
 
 @keyframes counter {
 	0% {
