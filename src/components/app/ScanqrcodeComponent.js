@@ -115,6 +115,14 @@ const handleQrCodeManually = (e) => {
       osdetails: osInfo,
       browserdetails: browserInfo
     }
+    _get("Customer/UserInfo?userid=0&phonenumber="+ userMobile)
+    .then((res2) => {
+      if(res2.data.result.isactive === "0") { 
+        toast.info('Your account is blocked due to three wrong attempts. Please connect with your respective sales person.');
+        setTimeout(function(){window.location.reload(); },2000);
+
+       }
+       else{
         _post("Customer/ValidateCouponAndSave", qrdata)
         .then((res) => {
           setTimeout(function(){setLoading(false);},2000); 
@@ -151,24 +159,13 @@ const handleQrCodeManually = (e) => {
           console.log(err);
           window.location.reload();
         });
-
-        _post("Customer/UserInfo?userid=0&phonenumber="+ userMobile, qrdata)
-    .then((res2) => {
-      setTimeout(function(){setLoading(false);},2000); 
-
-      console.log("UserInfo response - ", res2);
-      if(res2.data.result.isactive === "0") { 
-        toast.info('Your account is blocked due to three wrong attempts. Please connect with your respective sales person.');
-        setTimeout(function(){window.location.reload(); },2000);
        }
       }).catch((err) => {
-          setLoading(false);
           console.log(err);
-          window.location.reload();
       });
-
-  }
-
+   
+}
+  
   return (
     <div className='outsidescreen'>
       <ErrorBoundary>
