@@ -118,7 +118,7 @@ const handleQrCodeManually = (e) => {
     _get("Customer/UserInfo?userid=0&phonenumber="+ userMobile)
     .then((res2) => {
       if(res2.data.result.isactive === "0") { 
-        toast.info('Your account is blocked due to three wrong attempts. Please connect with your respective sales person.');
+        toast.error('Your account is blocked due to three wrong attempts. Please connect with your respective sales person.');
         setTimeout(function(){window.location.reload(); },2000);
 
        }
@@ -146,6 +146,11 @@ const handleQrCodeManually = (e) => {
           else if(res.data.resultcode === -103)
             {
               toast.error("This coupon code is invalid, please try again. After 3 incorrect attempts, your account will be deactivated.");
+              setTimeout(function(){window.location.reload(); },2000);
+          } 
+          else if(res.data.resultcode === -104)
+            {
+              toast.error('Your account is blocked due to three wrong attempts. Please connect with your respective sales person.');
               setTimeout(function(){window.location.reload(); },2000);
           } 
           else // if(res.data.resultcode === -100)
