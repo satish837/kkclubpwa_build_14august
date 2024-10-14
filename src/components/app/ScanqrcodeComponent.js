@@ -8,12 +8,16 @@ import { ipaddress, osdetails, browserdetails, geoLatitude, geoLongitude } from 
 import { toast } from 'react-toastify';
 import Link from 'next/link';
 import Image from 'next/image';
+import { _get } from "@/config/apiClient";
 import CountUp from 'react-countup';
 import TotalrewardpointsComponent from '../shared/TotalrewardpointsComponent';
 import { _post } from "@/config/apiClient";
 import HeaderDashboard from '../shared/HeaderDashboard';
 import FooterComponent from '../shared/FooterComponent';
 import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
+import { setUserInfo, removeUserInfo } from "@/config/userinfo";
+import {  getUserMobile, isUserToken } from "@/config/userauth";
+
 
 
 export default function ScanqrcodeComponent() {
@@ -24,9 +28,14 @@ export default function ScanqrcodeComponent() {
   const [couponecode, setCouponecode] = useState('');
   const [manualQrcode, setManualQrcode] = useState('');
   const [manualQrError, setManualQrError] = useState('');
-  
+  const [mounted, setMounted] = useState(true);
+  const [mounted2, setMounted2] = useState(true);
+  const[userstatus, setUserstatus] = useState('0');
+
   const { push } = useRouter();
+  const userToken   =  isUserToken();
   const userID = getUserID();
+  const userMobile = getUserMobile();
   const latInfo = geoLatitude();
   const lonInfo = geoLongitude();
   const ipInfo = ipaddress();
@@ -47,6 +56,10 @@ export default function ScanqrcodeComponent() {
   const getData =(val) =>{
     setScandata(val);
   }
+
+  
+
+
 
   useEffect(() => {
       const sdURL = scandata.split("?") || '';
@@ -102,16 +115,16 @@ const handleQrCodeManually = (e) => {
       osdetails: osInfo,
       browserdetails: browserInfo
     }
- 
         _post("Customer/ValidateCouponAndSave", qrdata)
         .then((res) => {
           setTimeout(function(){setLoading(false);},2000); 
-          // console.log(res)
+           console.log(res)
           if(res.data.resultcode === 0)
           {
               toast.success("Your code has been successfully scanned ");
               push(`/scanqrcode/${res.data.result[0].pointid}`);
-          } 
+          }
+          
           else if(res.data.resultcode === -101)
           {
               toast.error("This code has already been scanned. Try again.");
@@ -119,12 +132,12 @@ const handleQrCodeManually = (e) => {
           } 
           else if(res.data.resultcode === -102)
           {
-              toast.error("This coupon code is invalid. Please enter a valid coupon code.");
+              toast.error("This coupon code is invalid, please try again. After 3 incorrect attempts, your account will be deactivated.");
               setTimeout(function(){window.location.reload(); },2000);
           } 
           else if(res.data.resultcode === -103)
             {
-              toast.error("This coupon code is inactive. Please enter a valid coupon code. ");
+              toast.error("This coupon code is invalid, please try again. After 3 incorrect attempts, your account will be deactivated.");
               setTimeout(function(){window.location.reload(); },2000);
           } 
           else // if(res.data.resultcode === -100)
@@ -138,6 +151,21 @@ const handleQrCodeManually = (e) => {
           console.log(err);
           window.location.reload();
         });
+
+        _post("Customer/UserInfo?userid=0&phonenumber="+ userMobile, qrdata)
+    .then((res2) => {
+      setTimeout(function(){setLoading(false);},2000); 
+
+      console.log("UserInfo response - ", res2);
+      if(res2.data.result.isactive === "0") { 
+        toast.info('Your account is blocked due to three wrong attempts. Please connect with your respective sales person.');
+        setTimeout(function(){window.location.reload(); },2000);
+       }
+      }).catch((err) => {
+          setLoading(false);
+          console.log(err);
+          window.location.reload();
+      });
 
   }
 
