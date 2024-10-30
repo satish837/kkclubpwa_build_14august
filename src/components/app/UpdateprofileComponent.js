@@ -159,13 +159,14 @@ export default function UpdateprofileComponent() {
     const handleSubmit = (e) =>{
         e.preventDefault();
        // const regexPan = /^[a-z]{5}[0-9]{4}[a-z]{1}$/i;
-        if(agentcode !=='' && agentcode?.length !== 4) { setErroragentcode("Please enter valid Sales Executive ID."); return }
+        if(agentcode !=='') { setErroragentcode("Please enter valid Sales Executive ID."); return }
         else if(firstname==='') { setErrorfirstname("First name is required."); return }
       //  else if(lastname==='') { setErrorlastname("Last name is required."); return }
       //  else if(pan==='') { setErrorpan("PAN number is required");  return }
       //  else if(pan?.length !== 10) { setErrorpan("Please enter valid PAN number"); return }
       //  else if(!regexPan.test(pan)){setErrorpan("Invalid PAN Number!");}
         else
+
         {
             updateuserinfo();
         }
@@ -285,11 +286,11 @@ export default function UpdateprofileComponent() {
                         className="registerinput"
                         type="text"
                         name="agentcode"
-                        maxLength={4}
-                        onInput={(e)=> e.target.value = e.target.value.slice(0, e.target.maxLength) }
+                        //maxLength={4}
+                       // onInput={(e)=> e.target.value = e.target.value.slice(0, e.target.maxLength) }
                         value={ agentcode || '' }
-                        onChange={(e)=>{setAgentcode(e.target.value);setErroragentcode("");} }
-                        onKeyUp={handalonKeyup}
+                        //onChange={(e)=>{setAgentcode(e.target.value);setErroragentcode("");} }
+                        //onKeyUp={handalonKeyup}
                     />
                     <span className="registerError">{ erroragentcode  &&  erroragentcode }</span>
                 </div>

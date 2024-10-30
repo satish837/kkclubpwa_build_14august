@@ -17,6 +17,11 @@ export default function RedeempointsComponents() {
     const rewardspoints = TotalrewardpointsComponent();
     const userid = getUserID();
     const { push } = useRouter();
+    const [isPopupVisible, setIsPopupVisible] = useState(true);
+    // Function to close the popup
+    const closePopup = () => {
+        setIsPopupVisible(false);
+    };
 
     useEffect(() => {
         _get("/Payment/GetUserPayoutInfo?userid="+userid)
@@ -44,6 +49,20 @@ export default function RedeempointsComponents() {
     <ErrorBoundary>
         <HeaderDashboard />
     </ErrorBoundary>
+    {isPopupVisible && (
+    <div className="notification-pop">
+        <div className="cont">
+        <div onClick={closePopup} class="close"></div>
+        <h3>Enter PAN Number</h3>
+        <p>As per RBI Mandate, it is mandatory for Kerakoll Club to have a PAN number entered before amount is credited to any user's Bank Account. </p>
+
+        <p>Kindly enter your correct PAN number.</p>
+
+        <p>Please Note: PAN Number once entered, cannot be changed. Kindly be careful while entering your details. If PAN number is found to be incorrect, your kerakoll club account will be blocked by the banking authorities.</p>
+        </div>
+        
+    </div>
+    )}
     <div className="firework3"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
     <div className="firework4"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>
     <div className="firework5"><Image src="/assets/images/fire-work-img.png" width={151} height={151} alt="crach" quality={100} /></div>

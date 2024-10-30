@@ -140,12 +140,12 @@ const handleQrCodeManually = (e) => {
           } 
           else if(res.data.resultcode === -102)
           {
-              toast.error("This coupon code is invalid, please try again. After 3 incorrect attempts, your account will be deactivated.");
+              toast.error("This coupon code is invalid, please try again.");
               setTimeout(function(){window.location.reload(); },2000);
           } 
           else if(res.data.resultcode === -103)
             {
-              toast.error("This coupon code is invalid, please try again. After 3 incorrect attempts, your account will be deactivated.");
+              toast.error("This coupon code is invalid, please try again.");
               setTimeout(function(){window.location.reload(); },2000);
           } 
           else if(res.data.resultcode === -104)
