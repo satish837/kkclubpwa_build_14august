@@ -1479,7 +1479,7 @@ min-height: 200px;
 .earnepoints_content {   margin:50px 0rem 0 0; padding: 0 1rem;   }
 .earnepoints_content.show{display: none;}
 .earnepoints_scan { margin:150px 0 1rem 0; }
-
+.notification-pop .cont{width: 90%;}
 .gold-se-growth-banner .mid .head {
   color: #e7ca8e;
   font-size: 6vw;
